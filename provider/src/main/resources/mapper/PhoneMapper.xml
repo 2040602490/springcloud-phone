@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.dao.PhoneMapper">
+  <resultMap id="BaseResultMap" type="com.jk.entity.Phone">
+    <!--@mbg.generated-->
+    <!--@Table cx.phone-->
+    <id column="id" property="id" />
+    <result column="type" property="type" />
+    <result column="name" property="name" />
+    <result column="size" property="size" />
+    <result column="price" property="price" />
+    <result column="date" property="date" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `type`, `name`, `size`, price, `date`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from cx.phone
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from cx.phone
+    where id = #{id}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.jk.entity.Phone" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into cx.phone (`type`, `name`, `size`, price, `date`)
+    values (#{type}, #{name}, #{size}, #{price}, #{date})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.jk.entity.Phone" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into cx.phone
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="size != null">
+        `size`,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="date != null">
+        `date`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+        #{type},
+      </if>
+      <if test="name != null">
+        #{name},
+      </if>
+      <if test="size != null">
+        #{size},
+      </if>
+      <if test="price != null">
+        #{price},
+      </if>
+      <if test="date != null">
+        #{date},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jk.entity.Phone">
+    <!--@mbg.generated-->
+    update cx.phone
+    <set>
+      <if test="type != null">
+        `type` = #{type},
+      </if>
+      <if test="name != null">
+        `name` = #{name},
+      </if>
+      <if test="size != null">
+        `size` = #{size},
+      </if>
+      <if test="price != null">
+        price = #{price},
+      </if>
+      <if test="date != null">
+        `date` = #{date},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jk.entity.Phone">
+    <!--@mbg.generated-->
+    update cx.phone
+    set `type` = #{type},
+      `name` = #{name},
+      `size` = #{size},
+      price = #{price},
+      `date` = #{date}
+    where id = #{id}
+  </update>
+  <select id="queryCount" parameterType="com.jk.entity.Phone" resultType="int">
+    select count(1) from phone
+    <include refid="querySql"></include>
+  </select>
+  <sql id="querySql">
+    <where>
+      <if test="phone.name != null and phone.name != ''">
+        and name like'%${phone.name}%'
+      </if>
+    </where>
+  </sql>
+  <select id="queryUserPage" parameterType="com.jk.entity.Phone" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from
+    phone
+    <include refid="querySql"></include>
+    limit #{start},#{rows}
+  </select>
+</mapper>

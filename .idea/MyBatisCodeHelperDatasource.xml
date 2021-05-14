@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSchemaName" value="true" />
+        <option name="addSerializeUid" value="true" />
+        <option name="checkBlobColumn" value="true" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="com.jk.dao" />
+        <option name="javaMapperPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+        <option name="javaModelPackage" value="com.jk.entity" />
+        <option name="javaModelPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="eureka" />
+        <option name="mapperAnnotaion" value="true" />
+        <option name="modelAddEqualHashCode" value="true" />
+        <option name="modelAddToString" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="eureka">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.jk.dao" />
+                  <option name="javaMapperPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+                  <option name="javaModelPacakge" value="com.jk.entity" />
+                  <option name="javaModelPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+                  <option name="javaServiceInterfacePackage" value="com.jk.service" />
+                  <option name="javaServiceInterfacePath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+                  <option name="javaServicePackage" value="com.jk.service.impl" />
+                  <option name="javaServicePath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="noJdbcType" value="true" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="cx:phone">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Phone" />
+                  <option name="moduleName" value="eureka" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="E:\demo\springcloud-phone\provider\src\main\java" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
